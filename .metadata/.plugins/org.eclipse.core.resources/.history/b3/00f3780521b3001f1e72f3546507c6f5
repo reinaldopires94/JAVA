@@ -1,0 +1,22 @@
+package servicesInterContrato;
+
+import java.time.LocalDate;
+
+import entitiesInterfaces.Contract;
+import entitiesInterfaces.Installment;
+
+public class ContractService {
+	
+	private OnlinePaymentService  onlinePaymentService;
+
+	public ContractService(OnlinePaymentService onlinePaymentService) {
+		this.onlinePaymentService = onlinePaymentService;
+	}
+	
+	public void processContract(Contract contract, int months) {
+		contract.getInstallments().add(new Installment(LocalDate.of(2025, 7, 05), 206.04));
+		contract.getInstallments().add(new Installment(LocalDate.of(2025, 8, 05), 206.04));
+	}
+	
+
+}

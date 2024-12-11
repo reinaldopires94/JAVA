@@ -1,0 +1,5 @@
+package servicesInterContrato;
+
+public class PaypalService {
+
+}
